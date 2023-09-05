@@ -42,7 +42,7 @@ class ContextChatbot:
     @utils.enable_chat_history
     def main(self):
         chain = self.setup_chain()
-        user_query = st.chat_input(placeholder="Ask me about Bridge in Agriculture!")
+        user_query = st.chat_input(placeholder="Ask me anything!")
         if user_query:
             utils.display_msg(user_query, 'user')
             with st.spinner("Typing..."):
