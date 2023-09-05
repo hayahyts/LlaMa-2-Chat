@@ -3,12 +3,10 @@ import streamlit as st
 B_INST, E_INST = "[INST]", "[/INST]"
 B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
 DEFAULT_INSTRUCTION = "Chat History:\n\n{chat_history} \n\nHuman: {user_input}\n\n Assistant:"
-DEFAULT_SYSTEM_PROMPT = "Your primary focus is on answering questions related to banking in the agriculture sector. " \
-                        "Provide detailed, clear, and helpful responses to queries within this scope. Responses for " \
-                        "simple issues should be between 20-100 words, while more complex queries can be between " \
-                        "100-200 words max.If a response exceeds 200 words, provide a concise summary" \
-                        ". If a user asks about topics outside of this domain, kindly redirect them  " \
-                        "with a polite response. Do not say, I'm a large language model"
+DEFAULT_SYSTEM_PROMPT = "Your central mission is to ensure user satisfaction. Deliver responses that are detailed," \
+                        " clear, and beneficial. For straightforward questions, limit your answers to 20-100 words. " \
+                        "For more intricate topics, expand within a range of 100-200 words. Should a response" \
+                        " surpass 200 words, prioritize a succinct summary."
 
 
 def get_prompt(instruction=DEFAULT_INSTRUCTION, new_system_prompt=DEFAULT_SYSTEM_PROMPT):
