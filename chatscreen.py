@@ -6,9 +6,9 @@ from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferWindowMemory
 
-st.set_page_config(page_title="BIA chatbot", page_icon="⭐")
-st.header('Bridge-in-Agriculture chatbot')
-st.write('Enhancing Chatbot Interactions through Context Awareness')
+st.set_page_config(page_title="AryeeteyGPT", page_icon="⭐")
+st.header("AryeeteyGPT")
+st.write("Let's talk about anything you're interested in!")
 
 
 class ContextChatbot:
