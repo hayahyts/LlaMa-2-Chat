@@ -18,6 +18,7 @@ class ContextChatbot:
 
     @st.cache_resource
     def setup_chain(_self):
+        api_key = st.secrets["TOGETHER_AI_KEY"]
         template = utils.get_prompt()
         prompt = PromptTemplate(
             input_variables=["chat_history", "user_input"],
@@ -25,8 +26,9 @@ class ContextChatbot:
         )
         llm = TogetherLLM(
             model=_self.together_ai_model,
-            temperature=0.1,
-            max_tokens=512
+            api_key=api_key,
+            temperature=0.7,
+            max_tokens=250
         )
         memory = ConversationBufferWindowMemory(memory_key="chat_history", k=3)
         chain = LLMChain(

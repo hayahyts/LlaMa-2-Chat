@@ -11,7 +11,7 @@ class TogetherLLM(LLM):
     model: str = "togethercomputer/llama-2-70b-chat"
     """model endpoint to use"""
 
-    together_api_key: str = "fab68d9d0676016e067b771a333a52ea15d728dedd7b1429a85eb98565271137"
+    api_key: str = ""
     """Together API key"""
 
     temperature: float = 0.7
@@ -42,7 +42,7 @@ class TogetherLLM(LLM):
             **kwargs: Any,
     ) -> str:
         """Call to Together endpoint."""
-        together.api_key = self.together_api_key
+        together.api_key = self.api_key
         output = together.Complete.create(prompt,
                                           model=self.model,
                                           max_tokens=self.max_tokens,
